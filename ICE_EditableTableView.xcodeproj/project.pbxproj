@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3FF8296528344A7400EF8575 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8296428344A7400EF8575 /* AppDelegate.swift */; };
 		3FF8296728344A7400EF8575 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8296628344A7400EF8575 /* SceneDelegate.swift */; };
-		3FF8296928344A7400EF8575 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8296828344A7400EF8575 /* ViewController.swift */; };
 		3FF8296C28344A7400EF8575 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF8296A28344A7400EF8575 /* Main.storyboard */; };
 		3FF8296F28344A7400EF8575 /* ICE_EditableTableView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8296D28344A7400EF8575 /* ICE_EditableTableView.xcdatamodeld */; };
 		3FF8297128344A7600EF8575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FF8297028344A7600EF8575 /* Assets.xcassets */; };
@@ -43,7 +42,6 @@
 		3FF8296128344A7400EF8575 /* ICE_EditableTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICE_EditableTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF8296428344A7400EF8575 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FF8296628344A7400EF8575 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3FF8296828344A7400EF8575 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3FF8296B28344A7400EF8575 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FF8296E28344A7400EF8575 /* ICE_EditableTableView.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ICE_EditableTableView.xcdatamodel; sourceTree = "<group>"; };
 		3FF8297028344A7600EF8575 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,17 +105,15 @@
 		3FF8296328344A7400EF8575 /* ICE_EditableTableView */ = {
 			isa = PBXGroup;
 			children = (
+				3FF829A028345A1100EF8575 /* controller */,
+				3FF8299F28345A0800EF8575 /* model */,
 				3FF8296428344A7400EF8575 /* AppDelegate.swift */,
 				3FF8296628344A7400EF8575 /* SceneDelegate.swift */,
-				3FF8296828344A7400EF8575 /* ViewController.swift */,
 				3FF8296A28344A7400EF8575 /* Main.storyboard */,
 				3FF8297028344A7600EF8575 /* Assets.xcassets */,
 				3FF8297228344A7600EF8575 /* LaunchScreen.storyboard */,
 				3FF8297528344A7600EF8575 /* Info.plist */,
 				3FF8296D28344A7400EF8575 /* ICE_EditableTableView.xcdatamodeld */,
-				3FF8299728344B3D00EF8575 /* TextbookViewController.swift */,
-				3FF8299928344C8000EF8575 /* Book.swift */,
-				3FF8299D2834575E00EF8575 /* BookStore.swift */,
 			);
 			path = ICE_EditableTableView;
 			sourceTree = "<group>";
@@ -137,6 +133,23 @@
 				3FF8298A28344A7700EF8575 /* ICE_EditableTableViewUITestsLaunchTests.swift */,
 			);
 			path = ICE_EditableTableViewUITests;
+			sourceTree = "<group>";
+		};
+		3FF8299F28345A0800EF8575 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				3FF8299928344C8000EF8575 /* Book.swift */,
+				3FF8299D2834575E00EF8575 /* BookStore.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		3FF829A028345A1100EF8575 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				3FF8299728344B3D00EF8575 /* TextbookViewController.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +283,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FF8296928344A7400EF8575 /* ViewController.swift in Sources */,
 				3FF8299828344B3D00EF8575 /* TextbookViewController.swift in Sources */,
 				3FF8299A28344C8000EF8575 /* Book.swift in Sources */,
 				3FF8296528344A7400EF8575 /* AppDelegate.swift in Sources */,

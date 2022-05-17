@@ -21,6 +21,9 @@ class TextbookViewController: UITableView,
         <#code#>
     }
     
+    // Giving the VC access to the store
+    var bookStore : BookStore!
+    
     
     
 }
