@@ -66,4 +66,14 @@ class TextbookViewController: UITableViewController {
         cell.detailTextLabel?.text = book.genre
         return cell
     }
+    
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Book Title and Genre"
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return " - The End -"
+    }
+    
 }
