@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class BookStore {
+    
     var allBooks = [Book]()
     
     // Adding an item creation method
