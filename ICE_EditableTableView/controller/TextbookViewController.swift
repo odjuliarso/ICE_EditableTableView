@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-
 // This class will provide all three pieces of functionality that we need ( View controller, Data source, Event handling delegate)
 class TextbookViewController: UITableViewController {
     
@@ -22,11 +21,14 @@ class TextbookViewController: UITableViewController {
             
     // method to produce the cell for the table
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BookTableCell", for: indexPath)
+        
+        let book = bookStore.allBooks[indexPath.row]
+        
+        cell.textLabel?.text = book.title
+        cell.detailTextLabel?.text = book.genre
+        
+        return cell
     }
-    
-
-    
-    
     
 }
