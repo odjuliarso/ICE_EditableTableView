@@ -15,11 +15,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="swL-ga-bCj">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gj-5f-piK" userLabel="Add">
+                                    <rect key="frame" x="211" y="6.5" width="195" height="31"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Add Book"/>
+                                    <connections>
+                                        <action selector="addBook" destination="Tgc-fw-ita" eventType="touchUpInside" id="kQ9-Ki-NBP"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgD-lJ-zhY" userLabel="Edit">
+                                    <rect key="frame" x="8" y="6.5" width="195" height="31"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Edit Book"/>
+                                    <connections>
+                                        <action selector="toggleEditMode:" destination="Tgc-fw-ita" eventType="touchUpInside" id="urd-gg-lze"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="rgD-lJ-zhY" firstAttribute="centerY" secondItem="swL-ga-bCj" secondAttribute="centerY" id="59Q-7I-f6Q"/>
+                                <constraint firstItem="rgD-lJ-zhY" firstAttribute="leading" secondItem="swL-ga-bCj" secondAttribute="leading" constant="8" id="7s5-eD-iMd"/>
+                                <constraint firstItem="0gj-5f-piK" firstAttribute="leading" secondItem="rgD-lJ-zhY" secondAttribute="trailing" constant="8" id="AtA-Ip-6hC"/>
+                                <constraint firstAttribute="trailing" secondItem="0gj-5f-piK" secondAttribute="trailing" constant="8" id="HBx-7N-ZUA"/>
+                                <constraint firstItem="0gj-5f-piK" firstAttribute="width" secondItem="rgD-lJ-zhY" secondAttribute="width" id="Obf-3g-zYX"/>
+                                <constraint firstItem="0gj-5f-piK" firstAttribute="centerY" secondItem="swL-ga-bCj" secondAttribute="centerY" id="gHQ-xr-VU7"/>
+                            </constraints>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookTableCell" textLabel="FTG-ii-9GE" detailTextLabel="Lsi-sW-f7Q" style="IBUITableViewCellStyleValue1" id="2JE-kF-yNX">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookTableCell" textLabel="FTG-ii-9GE" detailTextLabel="Lsi-sW-f7Q" style="IBUITableViewCellStyleValue1" id="2JE-kF-yNX" customClass="BookCell">
+                                <rect key="frame" x="0.0" y="88.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2JE-kF-yNX" id="Yj7-zi-5XA">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2JE-kF-yNX" id="Yj7-zi-5XA" customClass="BookCell" customModule="ICE_EditableTableView" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -39,6 +70,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="FTG-ii-9GE" id="7Ea-3b-kQo"/>
+                                    <outlet property="valueLabel" destination="Lsi-sW-f7Q" id="IcB-1d-fKN"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

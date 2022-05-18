@@ -8,9 +8,14 @@
 import Foundation
 import UIKit
 
-class Book {
-    
-    
+class Book: Equatable {
+   
+    static func == (lhs: Book, rhs: Book) -> Bool {
+        return lhs.title == rhs.title
+        && lhs.genre == rhs.genre
+        && lhs.value == rhs.value
+    }
+       
     var title: String
     var genre: String
     var value: Int
@@ -44,4 +49,6 @@ class Book {
             self.init(title: "", genre: "", value: 0)
         }
     }
+    
+    
 }
