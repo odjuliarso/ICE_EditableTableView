@@ -70,10 +70,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="nameLabel" destination="FTG-ii-9GE" id="7Ea-3b-kQo"/>
-                                    <outlet property="valueLabel" destination="Lsi-sW-f7Q" id="IcB-1d-fKN"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

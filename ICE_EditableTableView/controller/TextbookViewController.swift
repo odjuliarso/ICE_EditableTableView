@@ -5,50 +5,49 @@
 //  Created by Student Account on 5/17/22.
 //
 
-import Foundation
 import UIKit
 
 // This class will provide all three pieces of functionality that we need ( View controller, Data source, Event handling delegate)
 class TextbookViewController: UITableViewController {
+   
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
-    
-    // MARK: Add 'add book' button
-    @IBAction func addBook(_ sender: UIButton) {
-//        let lastRow = tableView.numberOfRows(inSection: 0)
-//        let indexPath = IndexPath(row: lastRow, section: 0)
-//
-//        tableView.insertRows(at: [indexPath], with: .automatic)
-//
-        let newBook = bookStore.createBook()
+    // Giving the VC access to the store
+    var bookStore: BookStore!
         
+    // MARK: Add 'add book' button
+    @IBAction func addBook() {
+
+        let newBook = bookStore.createBook()
+
         if let index = bookStore.allBooks.firstIndex(of: newBook) {
             let indexPath = IndexPath(row: index, section: 0)
-            
             tableView.insertRows(at: [indexPath], with: .automatic)
         }
     }
     
+    // MARK: Add 'edit book' button
     @IBAction func toggleEditMode(_ sender: UIButton) {
         // If you are currently in editing mode...
         if isEditing {
-            // CHange the text of button to inform user of state
-//            sender.setTitle("Edit Book", for: .normal)
-            
-            // Turn off editing mode
+            sender.setTitle("Edit Book", for: .normal)
             setEditing(false, animated: true)
             
         } else {
-            // Change text of button to inform user of state
-//            sender.setTitle("Done", for: .normal)
-            
-            // Enter editing mode
+            sender.setTitle("Done", for: .normal)
             setEditing(true, animated: true)
         }
     }
     
-    
-    // Giving the VC access to the store
-    var bookStore: BookStore!
+    // MARK: Add 'remove book' from the table
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if ( editingStyle == .delete ) {
+            bookStore.remove(atIndex: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
     
     // The method to produce the number of rows
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,17 +61,9 @@ class TextbookViewController: UITableViewController {
         // get the data out of the 'bookStore' array using indexPath.row as the index
         let book = bookStore.allBooks[indexPath.row]
         
-        // and copy that info into the cell
+        // copy that info into the cell
         cell.textLabel?.text = book.title
         cell.detailTextLabel?.text = book.genre
-        
-        
-        
         return cell
     }
-    
-
-    
-    
-    
 }
