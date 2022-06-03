@@ -62,7 +62,7 @@ class TextbookViewController: UITableViewController {
         let book = bookStore.allBooks[indexPath.row]
         
         // copy that info into the cell
-        cell.textLabel?.text = book.title
+        cell.textLabel?.text = "\"\(book.title)\""
         cell.detailTextLabel?.text = book.genre
         return cell
     }
@@ -76,6 +76,7 @@ class TextbookViewController: UITableViewController {
         return " - The End -"
     }
     
+//    Sending the data for the selected row to the detail view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
           switch segue.identifier {
               case "showBookSegue":
