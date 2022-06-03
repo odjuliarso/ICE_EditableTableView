@@ -8,25 +8,28 @@
 import UIKit
 
 class Book: Equatable {
-   
+    
     static func == (lhs: Book, rhs: Book) -> Bool {
         return lhs.title == rhs.title
         && lhs.genre == rhs.genre
+        && lhs.price == rhs.price
     }
-       
+    
     var title: String
     var genre: String
+    var price: Int
     
     // MARK:  Designated initializer (REQUIRED)
-    init(title: String, genre: String) {
+    init(title: String, genre: String, price: Int) {
         self.title = title
         self.genre = genre
+        self.price = price
     }
     
     // MARK: Convenience initializer (OPTIONAL)
     convenience init(random: Bool = false) {
         if random {
-            let adjectives = ["Dark", "Peacful", "Bright"]
+            let adjectives = ["Dark", "Peaceful", "Bright"]
             let nouns = ["Mansion", "Alley", "Ceremony"]
             let genre = ["Nonfiction", "Thriller", "Romance"]
             
@@ -35,11 +38,13 @@ class Book: Equatable {
             
             let randomTitle = "\(randomAdjective) \(randomNoun)"
             let randomGenre = genre.randomElement()!
-
-
-            self.init(title: randomTitle, genre: randomGenre)
+            let randomePrice = Int.random(in: 1...99)
+            
+            self.init(title: randomTitle,
+                      genre: randomGenre,
+                      price: randomePrice)
         } else {
-            self.init(title: "", genre: "")
+            self.init(title: "", genre: "", price: 0)
         }
     }
     

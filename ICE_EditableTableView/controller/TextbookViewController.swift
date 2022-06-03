@@ -76,4 +76,18 @@ class TextbookViewController: UITableViewController {
         return " - The End -"
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+          switch segue.identifier {
+              case "showBookSegue":
+              if let row = tableView.indexPathForSelectedRow?.row {
+                  let theBook = bookStore.allBooks[row]
+                  let detailViewController = segue.destination as! MyDetailView
+
+                  detailViewController.book = theBook
+              }
+          default:
+              preconditionFailure("Unexpected segue")
+          }
+      }
+
 }

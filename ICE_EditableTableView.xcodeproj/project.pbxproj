@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F77A38C284960D7008C2F18 /* MyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F77A38B284960D7008C2F18 /* MyDetailView.swift */; };
 		3FF8296528344A7400EF8575 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8296428344A7400EF8575 /* AppDelegate.swift */; };
 		3FF8296728344A7400EF8575 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8296628344A7400EF8575 /* SceneDelegate.swift */; };
 		3FF8296C28344A7400EF8575 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF8296A28344A7400EF8575 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F77A38B284960D7008C2F18 /* MyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailView.swift; sourceTree = "<group>"; };
 		3FF8296128344A7400EF8575 /* ICE_EditableTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICE_EditableTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF8296428344A7400EF8575 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FF8296628344A7400EF8575 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				3FF8297228344A7600EF8575 /* LaunchScreen.storyboard */,
 				3FF8297528344A7600EF8575 /* Info.plist */,
 				3FF8296D28344A7400EF8575 /* ICE_EditableTableView.xcdatamodeld */,
+				3F77A38B284960D7008C2F18 /* MyDetailView.swift */,
 			);
 			path = ICE_EditableTableView;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				3FF8299828344B3D00EF8575 /* TextbookViewController.swift in Sources */,
 				3FF8299A28344C8000EF8575 /* Book.swift in Sources */,
 				3FF8296528344A7400EF8575 /* AppDelegate.swift in Sources */,
+				3F77A38C284960D7008C2F18 /* MyDetailView.swift in Sources */,
 				3FF8296728344A7400EF8575 /* SceneDelegate.swift in Sources */,
 				3FF8296F28344A7400EF8575 /* ICE_EditableTableView.xcdatamodeld in Sources */,
 				3FF8299E2834575E00EF8575 /* BookStore.swift in Sources */,
